@@ -17,6 +17,10 @@
         <antrun.plugin.version>1.7</antrun.plugin.version>
         <!--<jacoco.plugin.version>0.6.2.201302030002</jacoco.plugin.version>-->
         <jacoco.plugin.version>0.6.3-SNAPSHOT</jacoco.plugin.version>
+	
+	
+	<maven.compiler.source>1.6</maven.compiler.source>
+	<maven.compiler.target>1.6</maven.compiler.target>
     </properties>
 
     <modules>
@@ -24,6 +28,31 @@
         <module>service</module>
         <module>web</module>
     </modules>
+    
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco.plugin.version}</version>
+                <configuration>
+                    <check>
+                        <instructionRatio>100</instructionRatio>
+                        <classRatio>100</classRatio>
+                    </check>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>jacoco-initialize</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencyManagement>
 

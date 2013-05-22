@@ -83,10 +83,6 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco.plugin.version}</version>
                 <configuration>
-                    <propertyName>jacoco.agent.argLine</propertyName>
-                    <check>
-                        <instructionRatio>100</instructionRatio>
-                    </check>
                     <includes>
                         <include>com/leshazlewood/**</include>
                     </includes>
@@ -101,32 +97,6 @@
                         <sourceFolder>${basedir}/../service/src/main/java</sourceFolder>
                     </sourceFolders>
                 </configuration>
-
-                <executions>
-                    <execution>
-                        <id>jacoco-initialize</id>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                        <configuration>
-                            <tasks>
-                                <echo>[jacoco.agent.argLine] ${jacoco.agent.argLine}</echo>
-                            </tasks>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>report</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
 
 
