@@ -63,10 +63,9 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>org.apache.tomcat</groupId>
-                                    <artifactId>apache-tomcat</artifactId>
+                                    <artifactId>tomcat</artifactId>
                                     <version>${apache.tomcat.version}</version>
                                     <type>zip</type>
-                                    <classifier>bin</classifier>
                                     <overWrite>false</overWrite>
                                     <outputDirectory>${project.build.directory}</outputDirectory>
                                 </artifactItem>
