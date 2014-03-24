@@ -16,7 +16,7 @@
         <failsafe.plugin.version>2.12.4</failsafe.plugin.version>
         <antrun.plugin.version>1.7</antrun.plugin.version>
         <!--<jacoco.plugin.version>0.6.2.201302030002</jacoco.plugin.version>-->
-        <jacoco.plugin.version>0.6.3-SNAPSHOT</jacoco.plugin.version>
+        <jacoco.plugin.version>0.6.3.201306030806</jacoco.plugin.version>
 	
 	
 	<maven.compiler.source>1.6</maven.compiler.source>
